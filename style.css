@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+  color: #333;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0, 2);
+}
+
+.form-container {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #555;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border 0.3s;
+}
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+#ekle-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 10px;
+}
+
+#ekle-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+#ekle-btn:active {
+  transform: translateY(0);
+}
+
+.ozet-container {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.ozet-kutu {
+  flex: 1;
+  min-width: 200px;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ozet-kutu h3 {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ozet-kutu p {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.gelir-kutu {
+  border-left: 5px solid #4caf50;
+}
+.gelir-kutu p {
+  color: #4caf50;
+}
+
+.gider-kutu {
+  border-left: 5px solid #f44336;
+}
+.gider-kutu p {
+  color: #f44336;
+}
+
+.bakiye-kutu {
+  border-left: 5px solid #2196f3;
+}
+.bakiye-kutu p {
+  color: #2196f3;
+}
+
+#toplam-gider {
+  border-left: 5px solid #f44336;
+}
+
+#toplam-gider p {
+  color: #f44336;
+}
+
+#bakiye {
+  border-left: 5px solid #2196f3;
+}
+
+#bakiye p {
+  color: #2196f3;
+}
+
+.liste-container {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  min-height: 200px;
+}
+
+.liste-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#harcama-listesi {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.harcama-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-radius: 10px;
+  background: #f8f9fa;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.harcama-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.harcama-item.gelir {
+  border-left: 5px solid #4caf50;
+}
+
+.harcama-item.gider {
+  border-left: 5px solid #f44336;
+}
+
+.harcama-bilgi {
+  flex: 1;
+}
+
+.harcama-aciklama {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.harcama-tarih {
+  font-size: 12px;
+  color: #999;
+}
+
+.harcama-miktar {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.gelir .harcama-miktar {
+  color: #4caf50;
+}
+
+.gider .harcama-miktar {
+  color: #f44336;
+}
+
+.sil-btn {
+  padding: 8px 15px;
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.sil-btn:hover {
+  background: #d32f2f;
+}
+
+.bos-mesaj {
+  text-align: center;
+  color: #999;
+  padding: 40px;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .ozet-container {
+    flex-direction: column;
+  }
+
+  .harcama-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .harcama-miktar {
+    margin-right: 0;
+  }
+}

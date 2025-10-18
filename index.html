@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Harcama Takip Uygulaması</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container"></div>
+    <h1>Harcama Takip Uygulaması</h1>
+     <!-- Form Bölümü -->
+      <div class="form-container">
+        <div class="form-group">
+          <label for="aciklama-input">Açıklama</label>
+          <input
+            id="aciklama-input"
+            placeholder="Örn: Market alışverişi"
+            type="text"
+            required
+          /></div><br />
+        <div class="form-group">
+          <label for="miktar-input">Miktar (TL)</label>
+          <input
+            id="miktar-input"
+            placeholder="0.00"
+            step="0.01"
+            type="number"
+            min="0"
+            required
+          /></div><br />
+        <div class="form-group">
+          <label for="tur-select">Tür</label>
+          <select id="tur-select" required>
+            <option value="gider">Gider</option>
+            <option value="gelir">Gelir</option></select
+          ></div><br />
+
+          <button id="ekle-btn">Ekle</button><br />
+        
+      </div>
+       <!-- Özet Bölümü -->
+      <div class="ozet-container">
+        <div class="ozet-kutu gelir-kutu">
+          <h3>TOPLAM GELİR</h3>
+          <p id="toplam-gelir">0.00 TL</p>
+        </div>
+        <div class="ozet-kutu gider-kutu">
+          <h3>TOPLAM GİDER</h3>
+          <p id="toplam-gider">0.00 TL</p>
+        </div>
+        <div class="ozet-kutu bakiye-kutu">
+          <h3>BAKİYE</h3>
+          <p id="bakiye">0.00 TL</p>
+        </div>
+      </div>
+    <!-- Liste Bölümü -->
+        <div class="liste-container">
+            <h2>İşlemler</h2>
+            <div id="harcama-listesi">
+                <div class="bos-mesaj">Henüz işlem bulunmuyor. Yukarıdan ekleyebilirsiniz.</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
